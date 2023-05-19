@@ -240,7 +240,7 @@ const EditImage = memo(({ labels = {}, image = '', color = '#1e88e5', initialSta
           'alignItems': 'center',
           padding: '0px 16px'
         }}>
-        <button className="icon-btn" onClick={() => { onCloseEditPanel(false) }}>
+        <button type='button' className="icon-btn" onClick={() => { onCloseEditPanel(false) }}>
           <span className="material-icons">clear</span>
         </button>
       </div>
@@ -365,7 +365,7 @@ const EditImage = memo(({ labels = {}, image = '', color = '#1e88e5', initialSta
                   </div>
 
                   <p style={{ marginBottom: '4px !important' }}>
-                    <button title="Cut the image" className="icon-btn" onClick={onCrop}>
+                    <button type='button' title="Cut the image" className="icon-btn" onClick={onCrop}>
                       <span className="material-icons"> crop </span>
                     </button>
                   </p>
@@ -377,6 +377,7 @@ const EditImage = memo(({ labels = {}, image = '', color = '#1e88e5', initialSta
             </TabItem>
           </TabContainer>
           <button
+            type='button'
             title={labels['Undo']}
             disabled={state.arrayCopiedImages.length <= 1}
             style={{ position: 'absolute', right: '10px', top: '30px' }}
@@ -386,7 +387,7 @@ const EditImage = memo(({ labels = {}, image = '', color = '#1e88e5', initialSta
             <span className="material-icons"> refresh </span>
           </button>
           <div className='flex-row-start' style={{ marginTop: '10px', justifyContent: 'space-between', alignItems: 'center' }}>
-            <button className="save-btn" onClick={() => { onCloseEditPanel(true) }}>{labels['Save']}</button>
+            <button type='button' className="save-btn" onClick={() => { onCloseEditPanel(true) }}>{labels['Save']}</button>
             {sizeImage && <p
               className="caption image-caption"
               style={{
